@@ -2,12 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>View Student by NPM</title>
+		<link rel="stylesheet" th:href="@{/css/style.css}"
+          href="../../css/style.css" />
 	</head>
 	<body>
-		<h4>Data :</h4>
-		<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
-		<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
-		<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
-		<h4>Berhasil Dihapus</h4>
+		<div class="container">
+	    	<div class="card card-container">
+				<h4>Data :</h4>
+				<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
+				<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
+				<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
+				<h4>Berhasil Dihapus</h4>
+			</div>
+		</div>
 	</body>
 </html>

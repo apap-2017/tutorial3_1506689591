@@ -2,14 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>View All Students</title>
+		<link rel="stylesheet" th:href="@{/css/style.css}"
+          href="../../css/style.css" />
 	</head>
 	<body>
-		<div th:each="student,iterationStatus: ${students}">
-			<h3 th:text="'No. ' + ${iterationStatus.count}">No. 1</h3>
-			<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
-			<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
-			<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
-			<hr/>
+		<div class="container">
+		    <div class="card card-container">
+				<div th:each="student,iterationStatus: ${students}">
+					<h3 th:text="'No. ' + ${iterationStatus.count}">No. 1</h3>
+					<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
+					<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
+					<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
+					<hr/>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

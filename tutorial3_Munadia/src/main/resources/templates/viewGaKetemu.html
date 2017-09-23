@@ -2,8 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>View All Students</title>
+		<link rel="stylesheet" th:href="@{/css/style.css}"
+          href="../../css/style.css" />
 	</head>
 	<body>
-		<h3 th:text="'NPM ' + ${npm} + ' tidak ditemukan'">NPM tidak ada</h3>
+		<div class="container">
+	    	<div class="card card-container">
+				<h3 th:text="'NPM ' + ${npm} + ' tidak ditemukan'">NPM tidak ada</h3>
+			</div>
+		</div>
 	</body>
 </html>
